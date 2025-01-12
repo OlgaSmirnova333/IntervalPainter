@@ -66,7 +66,7 @@ public class CanvasManager
         return _canvas;
     }
 
-    // преобразование в изображение для дальнейшего использования
+    // преобразование в изображение для дальнейшего использования в PictureBox
     public Bitmap GetBitmap()
     {
         using (var image = SKImage.FromBitmap(_bitmap))

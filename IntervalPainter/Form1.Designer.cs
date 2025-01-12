@@ -31,9 +31,9 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            selectDateTimeStart = new DateTimePicker();
             label5 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            selectDateTimeEnd = new DateTimePicker();
             checkBox1 = new CheckBox();
             listBox1 = new ListBox();
             btnDraw = new Button();
@@ -77,17 +77,17 @@
             label3.TabIndex = 2;
             label3.Text = "Начало";
             // 
-            // dateTimePicker1
+            // selectDateTimeStart
             // 
-            dateTimePicker1.AllowDrop = true;
-            dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm";
-            dateTimePicker1.Font = new Font("Segoe UI", 15F);
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(142, 169);
-            dateTimePicker1.Margin = new Padding(5);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(344, 34);
-            dateTimePicker1.TabIndex = 4;
+            selectDateTimeStart.AllowDrop = true;
+            selectDateTimeStart.CustomFormat = "dd.MM.yyyy HH:mm";
+            selectDateTimeStart.Font = new Font("Segoe UI", 15F);
+            selectDateTimeStart.Format = DateTimePickerFormat.Custom;
+            selectDateTimeStart.Location = new Point(142, 169);
+            selectDateTimeStart.Margin = new Padding(5);
+            selectDateTimeStart.Name = "selectDateTimeStart";
+            selectDateTimeStart.Size = new Size(344, 34);
+            selectDateTimeStart.TabIndex = 4;
             // 
             // label5
             // 
@@ -100,16 +100,16 @@
             label5.TabIndex = 5;
             label5.Text = "Конец";
             // 
-            // dateTimePicker2
+            // selectDateTimeEnd
             // 
-            dateTimePicker2.CustomFormat = "dd.MM.yyyy HH:mm";
-            dateTimePicker2.Font = new Font("Segoe UI", 15F);
-            dateTimePicker2.Format = DateTimePickerFormat.Custom;
-            dateTimePicker2.Location = new Point(142, 242);
-            dateTimePicker2.Margin = new Padding(5);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(344, 34);
-            dateTimePicker2.TabIndex = 6;
+            selectDateTimeEnd.CustomFormat = "dd.MM.yyyy HH:mm";
+            selectDateTimeEnd.Font = new Font("Segoe UI", 15F);
+            selectDateTimeEnd.Format = DateTimePickerFormat.Custom;
+            selectDateTimeEnd.Location = new Point(142, 242);
+            selectDateTimeEnd.Margin = new Padding(5);
+            selectDateTimeEnd.Name = "selectDateTimeEnd";
+            selectDateTimeEnd.Size = new Size(344, 34);
+            selectDateTimeEnd.TabIndex = 6;
             // 
             // checkBox1
             // 
@@ -203,9 +203,9 @@
             Controls.Add(btnDraw);
             Controls.Add(listBox1);
             Controls.Add(checkBox1);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(selectDateTimeEnd);
             Controls.Add(label5);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(selectDateTimeStart);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -223,9 +223,9 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker selectDateTimeStart;
         private Label label5;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker selectDateTimeEnd;
         private CheckBox checkBox1;
         private ListBox listBox1;
         private Button btnDraw;

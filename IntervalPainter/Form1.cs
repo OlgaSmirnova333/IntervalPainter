@@ -1,7 +1,4 @@
 using SkiaSharp;
-using System;
-using System.Drawing;
-using System.Windows.Forms;
 using RIntervals.BaseClasses;
 using RIntervals.Interfaces;
 
@@ -51,9 +48,9 @@ namespace WinFormsApp1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var interval = new Interval<IIntervalSource>(dateTimePicker1.Value, dateTimePicker2.Value);
+            var interval = new Interval<IIntervalSource>(selectDateTimeStart.Value, selectDateTimeEnd.Value);
             IntervalsTime.Add(interval);
-            listBox1.Items.Add(dateTimePicker1.Value.ToString() + "-" + dateTimePicker2.Value.ToString());
+            listBox1.Items.Add(selectDateTimeStart.Value.ToString() + "-" + selectDateTimeEnd.Value.ToString());
            
 
 
