@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace DrawIntervals
 {
     internal static class Program
     {

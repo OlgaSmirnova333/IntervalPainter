@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+﻿namespace DrawIntervals
 {
     partial class DrawIntervalsForm
     {
@@ -308,7 +308,7 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Form1
+            // DrawIntervalsForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -316,7 +316,7 @@
             Controls.Add(tableLayoutPanel1);
             Font = new Font("Segoe UI", 15F);
             Margin = new Padding(5);
-            Name = "Form1";
+            Name = "DrawIntervalsForm";
             Text = "Рисование интервалов";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

@@ -8,11 +8,11 @@ using System.Security.Policy;
 
 // Класс для рисования временных интервалов
 
-public class IntervalDrawer
+public class IntervalsDrawer
 {
     private SKCanvas _canvas;
 
-    public IntervalDrawer(SKCanvas canvas)
+    public IntervalsDrawer(SKCanvas canvas)
     {
         _canvas = canvas ?? throw new ArgumentNullException(nameof(canvas));
     }

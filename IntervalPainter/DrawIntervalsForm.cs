@@ -6,7 +6,7 @@ using System.Drawing.Text;
 using System;
 
 
-namespace WinFormsApp1
+namespace DrawIntervals
 {
     public partial class DrawIntervalsForm : Form
     {
@@ -83,7 +83,7 @@ namespace WinFormsApp1
         public async Task RenderIntervals(PictureBox pictureBox)
         {
 
-            var intervalDrawer = new IntervalDrawer(canvasManager.GetCanvas());
+            var intervalDrawer = new IntervalsDrawer(canvasManager.GetCanvas());
             await intervalDrawer.DrawIntervalsAsync(
                 IntervalsTime,
                 drawIntervalsControl2.Width,
