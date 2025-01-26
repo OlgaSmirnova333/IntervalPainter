@@ -11,13 +11,6 @@ namespace DrawIntervals
     public partial class DrawIntervalsForm : Form
     {
         #region Prts
-        enum Period
-        {
-            Смена,
-            Сутки,
-            Неделя,
-            Месяц
-        }
         enum Operations
         {
             Объединение,
