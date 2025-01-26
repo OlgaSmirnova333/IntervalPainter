@@ -34,11 +34,11 @@ namespace DrawIntervals
             canvasManager = new CanvasManager(drawIntervalsControl2.Width, drawIntervalsControl2.pictureBox1.Height);
             pictureBoxRenderer = new PictureBoxRenderer(drawIntervalsControl2.pictureBox1);
             IntervalsTime = new BindingList<Interval<IIntervalSource>>();
-            bindingSource1.DataSource = IntervalsTime;
-            dataGridView1.DataSource = bindingSource1;
-            dataGridView1.Columns[2].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            comboBox1.DataSource = Enum.GetNames(typeof(Operations));
+            bindingSource.DataSource = IntervalsTime;
+            dataGridView.DataSource = bindingSource;
+            dataGridView.Columns[2].Visible = false;
+            dataGridView.Columns[3].Visible = false;
+            selectOperation.DataSource = Enum.GetNames(typeof(Operations));
 
         }
 
@@ -66,7 +66,7 @@ namespace DrawIntervals
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGenerateWithStep_Click(object sender, EventArgs e)
         {
             selectDateTimeStart.Value = IntervalsTime[IntervalsTime.Count - 1].End;
             selectDateTimeEnd.Value = IntervalsTime[IntervalsTime.Count - 1].End + Step;
@@ -91,7 +91,7 @@ namespace DrawIntervals
         }
 
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void rbShift_CheckedChanged(object sender, EventArgs e)
         {
             DateTime dayShiftStart = now.Date.AddHours(8);  
             DateTime dayShiftEnd = now.Date.AddHours(20);
@@ -111,13 +111,13 @@ namespace DrawIntervals
             }
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        private void rbDay_CheckedChanged(object sender, EventArgs e)
         {
             PeriodStart = new DateTime(now.Year, now.Month, now.Day, 0, 0, 0);
             PeriodEnd = new DateTime(now.Year, now.Month, now.Day + 1, 0, 0, 0);
         }
 
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        private void rbWeek_CheckedChanged(object sender, EventArgs e)
         {
             DayOfWeek currentDayOfWeek = now.DayOfWeek;
             int offsetMonday = (currentDayOfWeek == DayOfWeek.Sunday ? 6 : (int)currentDayOfWeek - 1);
@@ -128,7 +128,7 @@ namespace DrawIntervals
             PeriodEnd = new DateTime(sunday.Year, sunday.Month, sunday.Day, 0, 0, 0);
         }
 
-        private void radioButton4_CheckedChanged(object sender, EventArgs e)
+        private void rbMonth_CheckedChanged(object sender, EventArgs e)
         {
             int lastDay = DateTime.DaysInMonth(now.Year, now.Month);
             PeriodStart = new DateTime(now.Year, now.Month, 1, 0, 0, 0);

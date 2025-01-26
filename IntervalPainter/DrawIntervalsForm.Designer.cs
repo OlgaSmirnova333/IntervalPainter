@@ -29,67 +29,67 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            lblOperationType = new Label();
+            lblAddInterval = new Label();
+            lblBegin = new Label();
             selectDateTimeStart = new DateTimePicker();
-            label5 = new Label();
+            lblEnd = new Label();
             selectDateTimeEnd = new DateTimePicker();
             btnDraw = new Button();
             btnClear = new Button();
-            comboBox1 = new ComboBox();
+            selectOperation = new ComboBox();
             btnAdd = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
-            dataGridView1 = new DataGridView();
+            dataGridView = new DataGridView();
             drawIntervalsControl2 = new IntervalPainter.DrawIntervalsControl();
             panel1 = new Panel();
-            radioButton4 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
-            button1 = new Button();
-            bindingSource1 = new BindingSource(components);
+            rbMonth = new RadioButton();
+            rbWeek = new RadioButton();
+            rbDay = new RadioButton();
+            rbShift = new RadioButton();
+            btnGenerateWithStep = new Button();
+            bindingSource = new BindingSource(components);
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblOperationType
             // 
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 15F);
-            label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(5, 0);
-            label1.Margin = new Padding(5, 0, 5, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(199, 77);
-            label1.TabIndex = 0;
-            label1.Text = "Вид операции";
+            lblOperationType.Dock = DockStyle.Fill;
+            lblOperationType.Font = new Font("Segoe UI", 15F);
+            lblOperationType.ImageAlign = ContentAlignment.TopLeft;
+            lblOperationType.Location = new Point(5, 0);
+            lblOperationType.Margin = new Padding(5, 0, 5, 0);
+            lblOperationType.Name = "lblOperationType";
+            lblOperationType.Size = new Size(199, 77);
+            lblOperationType.TabIndex = 0;
+            lblOperationType.Text = "Вид операции";
             // 
-            // label2
+            // lblAddInterval
             // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI", 15F);
-            label2.Location = new Point(5, 77);
-            label2.Margin = new Padding(5, 0, 5, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(199, 58);
-            label2.TabIndex = 1;
-            label2.Text = "Добавить интервал";
+            lblAddInterval.AutoSize = true;
+            lblAddInterval.Dock = DockStyle.Fill;
+            lblAddInterval.Font = new Font("Segoe UI", 15F);
+            lblAddInterval.Location = new Point(5, 77);
+            lblAddInterval.Margin = new Padding(5, 0, 5, 0);
+            lblAddInterval.Name = "lblAddInterval";
+            lblAddInterval.Size = new Size(199, 58);
+            lblAddInterval.TabIndex = 1;
+            lblAddInterval.Text = "Добавить интервал";
             // 
-            // label3
+            // lblBegin
             // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Segoe UI", 15F);
-            label3.Location = new Point(5, 135);
-            label3.Margin = new Padding(5, 0, 5, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(199, 64);
-            label3.TabIndex = 2;
-            label3.Text = "Начало";
+            lblBegin.AutoSize = true;
+            lblBegin.Dock = DockStyle.Fill;
+            lblBegin.Font = new Font("Segoe UI", 15F);
+            lblBegin.Location = new Point(5, 135);
+            lblBegin.Margin = new Padding(5, 0, 5, 0);
+            lblBegin.Name = "lblBegin";
+            lblBegin.Size = new Size(199, 64);
+            lblBegin.TabIndex = 2;
+            lblBegin.Text = "Начало";
             // 
             // selectDateTimeStart
             // 
@@ -104,17 +104,17 @@
             selectDateTimeStart.Size = new Size(207, 34);
             selectDateTimeStart.TabIndex = 4;
             // 
-            // label5
+            // lblEnd
             // 
-            label5.AutoSize = true;
-            label5.Dock = DockStyle.Fill;
-            label5.Font = new Font("Segoe UI", 15F);
-            label5.Location = new Point(5, 199);
-            label5.Margin = new Padding(5, 0, 5, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(199, 65);
-            label5.TabIndex = 5;
-            label5.Text = "Конец";
+            lblEnd.AutoSize = true;
+            lblEnd.Dock = DockStyle.Fill;
+            lblEnd.Font = new Font("Segoe UI", 15F);
+            lblEnd.Location = new Point(5, 199);
+            lblEnd.Margin = new Padding(5, 0, 5, 0);
+            lblEnd.Name = "lblEnd";
+            lblEnd.Size = new Size(199, 65);
+            lblEnd.TabIndex = 5;
+            lblEnd.Text = "Конец";
             // 
             // selectDateTimeEnd
             // 
@@ -154,17 +154,17 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
-            // comboBox1
+            // selectOperation
             // 
-            comboBox1.Dock = DockStyle.Fill;
-            comboBox1.Font = new Font("Segoe UI", 15F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(214, 5);
-            comboBox1.Margin = new Padding(5);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(207, 36);
-            comboBox1.TabIndex = 12;
-            comboBox1.UseWaitCursor = true;
+            selectOperation.Dock = DockStyle.Fill;
+            selectOperation.Font = new Font("Segoe UI", 15F);
+            selectOperation.FormattingEnabled = true;
+            selectOperation.Location = new Point(214, 5);
+            selectOperation.Margin = new Padding(5);
+            selectOperation.Name = "selectOperation";
+            selectOperation.Size = new Size(207, 36);
+            selectOperation.TabIndex = 12;
+            selectOperation.UseWaitCursor = true;
             // 
             // btnAdd
             // 
@@ -190,17 +190,17 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 1101F));
             tableLayoutPanel1.Controls.Add(btnClear, 2, 7);
             tableLayoutPanel1.Controls.Add(btnDraw, 0, 7);
-            tableLayoutPanel1.Controls.Add(label2, 0, 1);
-            tableLayoutPanel1.Controls.Add(label3, 0, 2);
-            tableLayoutPanel1.Controls.Add(label5, 0, 3);
+            tableLayoutPanel1.Controls.Add(lblAddInterval, 0, 1);
+            tableLayoutPanel1.Controls.Add(lblBegin, 0, 2);
+            tableLayoutPanel1.Controls.Add(lblEnd, 0, 3);
             tableLayoutPanel1.Controls.Add(selectDateTimeEnd, 1, 3);
             tableLayoutPanel1.Controls.Add(selectDateTimeStart, 1, 2);
-            tableLayoutPanel1.Controls.Add(comboBox1, 1, 0);
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
-            tableLayoutPanel1.Controls.Add(dataGridView1, 0, 6);
+            tableLayoutPanel1.Controls.Add(selectOperation, 1, 0);
+            tableLayoutPanel1.Controls.Add(lblOperationType, 0, 0);
+            tableLayoutPanel1.Controls.Add(dataGridView, 0, 6);
             tableLayoutPanel1.Controls.Add(drawIntervalsControl2, 3, 1);
             tableLayoutPanel1.Controls.Add(panel1, 3, 0);
-            tableLayoutPanel1.Controls.Add(button1, 0, 4);
+            tableLayoutPanel1.Controls.Add(btnGenerateWithStep, 0, 4);
             tableLayoutPanel1.Controls.Add(btnAdd, 0, 5);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -218,17 +218,17 @@
             tableLayoutPanel1.Size = new Size(1648, 906);
             tableLayoutPanel1.TabIndex = 14;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tableLayoutPanel1.SetColumnSpan(dataGridView1, 3);
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 424);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(540, 392);
-            dataGridView1.TabIndex = 14;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableLayoutPanel1.SetColumnSpan(dataGridView, 3);
+            dataGridView.Dock = DockStyle.Fill;
+            dataGridView.Location = new Point(3, 424);
+            dataGridView.Name = "dataGridView";
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.Size = new Size(540, 392);
+            dataGridView.TabIndex = 14;
             // 
             // drawIntervalsControl2
             // 
@@ -242,71 +242,71 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(radioButton4);
-            panel1.Controls.Add(radioButton3);
-            panel1.Controls.Add(radioButton2);
-            panel1.Controls.Add(radioButton1);
+            panel1.Controls.Add(rbMonth);
+            panel1.Controls.Add(rbWeek);
+            panel1.Controls.Add(rbDay);
+            panel1.Controls.Add(rbShift);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(549, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(1096, 71);
             panel1.TabIndex = 18;
             // 
-            // radioButton4
+            // rbMonth
             // 
-            radioButton4.Location = new Point(831, 17);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(196, 32);
-            radioButton4.TabIndex = 3;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Месяц";
-            radioButton4.UseVisualStyleBackColor = true;
-            radioButton4.CheckedChanged += radioButton4_CheckedChanged;
+            rbMonth.Location = new Point(831, 17);
+            rbMonth.Name = "rbMonth";
+            rbMonth.Size = new Size(196, 32);
+            rbMonth.TabIndex = 3;
+            rbMonth.TabStop = true;
+            rbMonth.Text = "Месяц";
+            rbMonth.UseVisualStyleBackColor = true;
+            rbMonth.CheckedChanged += rbMonth_CheckedChanged;
             // 
-            // radioButton3
+            // rbWeek
             // 
-            radioButton3.Location = new Point(590, 9);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(169, 48);
-            radioButton3.TabIndex = 2;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Неделя";
-            radioButton3.UseVisualStyleBackColor = true;
-            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
+            rbWeek.Location = new Point(590, 9);
+            rbWeek.Name = "rbWeek";
+            rbWeek.Size = new Size(169, 48);
+            rbWeek.TabIndex = 2;
+            rbWeek.TabStop = true;
+            rbWeek.Text = "Неделя";
+            rbWeek.UseVisualStyleBackColor = true;
+            rbWeek.CheckedChanged += rbWeek_CheckedChanged;
             // 
-            // radioButton2
+            // rbDay
             // 
-            radioButton2.Location = new Point(337, 13);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(167, 40);
-            radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Сутки";
-            radioButton2.UseVisualStyleBackColor = true;
-            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            rbDay.Location = new Point(337, 13);
+            rbDay.Name = "rbDay";
+            rbDay.Size = new Size(167, 40);
+            rbDay.TabIndex = 1;
+            rbDay.TabStop = true;
+            rbDay.Text = "Сутки";
+            rbDay.UseVisualStyleBackColor = true;
+            rbDay.CheckedChanged += rbDay_CheckedChanged;
             // 
-            // radioButton1
+            // rbShift
             // 
-            radioButton1.Location = new Point(64, 17);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(154, 36);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Смена";
-            radioButton1.UseVisualStyleBackColor = true;
-            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            rbShift.Location = new Point(64, 17);
+            rbShift.Name = "rbShift";
+            rbShift.Size = new Size(154, 36);
+            rbShift.TabIndex = 0;
+            rbShift.TabStop = true;
+            rbShift.Text = "Смена";
+            rbShift.UseVisualStyleBackColor = true;
+            rbShift.CheckedChanged += rbShift_CheckedChanged;
             // 
-            // button1
+            // btnGenerateWithStep
             // 
-            button1.Anchor = AnchorStyles.None;
-            tableLayoutPanel1.SetColumnSpan(button1, 3);
-            button1.Location = new Point(114, 267);
-            button1.Name = "button1";
-            button1.Size = new Size(318, 92);
-            button1.TabIndex = 15;
-            button1.Text = "Генерировать с шагом";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnGenerateWithStep.Anchor = AnchorStyles.None;
+            tableLayoutPanel1.SetColumnSpan(btnGenerateWithStep, 3);
+            btnGenerateWithStep.Location = new Point(114, 267);
+            btnGenerateWithStep.Name = "btnGenerateWithStep";
+            btnGenerateWithStep.Size = new Size(318, 92);
+            btnGenerateWithStep.TabIndex = 15;
+            btnGenerateWithStep.Text = "Генерировать с шагом";
+            btnGenerateWithStep.UseVisualStyleBackColor = true;
+            btnGenerateWithStep.Click += btnGenerateWithStep_Click;
             // 
             // DrawIntervalsForm
             // 
@@ -320,33 +320,33 @@
             Text = "Рисование интервалов";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label lblOperationType;
+        private Label lblAddInterval;
+        private Label lblBegin;
         private DateTimePicker selectDateTimeStart;
-        private Label label5;
+        private Label lblEnd;
         private DateTimePicker selectDateTimeEnd;
         private Button btnDraw;
         private Button btnClear;
-        private ComboBox comboBox1;
+        private ComboBox selectOperation;
         private Button btnAdd;
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridView1;
-        private BindingSource bindingSource1;
-        private Button button1;
+        private DataGridView dataGridView;
+        private BindingSource bindingSource;
+        private Button btnGenerateWithStep;
         private IntervalPainter.DrawIntervalsControl drawIntervalsControl2;
         private Panel panel1;
-        private RadioButton radioButton4;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private RadioButton rbMonth;
+        private RadioButton rbWeek;
+        private RadioButton rbDay;
+        private RadioButton rbShift;
     }
 }
